@@ -1,0 +1,206 @@
+/* Google Font */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+/* Variables */
+:root{
+    --first-color-page:    #FFF3E2;
+    --second-color-page:   #FFD4A9;
+    --third-color-page:    #FFC2B4;
+    --fourth-color-page:   #A84388;
+    --font-color-body:     #ff8928;
+    --font-weight-bold: 700;
+    --google-font: 'Poppins', sans-serif;
+}
+
+body{
+    color: #000;
+    font-family: var(--google-font);
+}
+
+li{
+    display: inline-block;
+    margin-left: 40px;
+    list-style: none;
+}
+
+a{
+    text-decoration: none;
+    font-size: 17px;
+    font-weight: var(--font-weight-bold);
+    color: #000;
+}
+
+.row{
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+}
+
+.row > div{
+    width: 50%;
+}
+
+.container{
+    width: 100%;
+    max-width: 85%;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+section{
+    height: 100vh;
+}
+
+section > .container{
+    height: 100%;
+}
+
+.btn-active{
+    border: 1px solid transparent;
+    padding: 10px 20px;
+    border-radius: 50px;
+    background: var(--font-color-body);
+    color: #fff;
+}
+
+/* Header */
+.navbar{
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 5rem;
+    width: 100%;
+    z-index: 100;
+}
+
+.navbar > .container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+}
+
+.sticky{
+    background: #FFF;
+    box-shadow: 0 0.063rem 0.625rem 0 rgba(0,0,0,.2);
+    transition-duration: 0.8s;
+}
+
+.logo h1::before{
+    content: 'Me';
+    color: var(--font-color-body);
+}
+
+.nav-item a:hover{
+    border-bottom: 3.5px solid #515151;
+}
+
+.home-content{
+    font-size: 30px;
+    line-height: 70px;
+    width: 50%;
+}
+
+.home-content span{
+    letter-spacing: 10px;
+}
+
+.home-content h1{
+    font-size: 2em;
+    font-weight: var(--font-weight-bold);
+}
+
+.home-content h1::after{
+    content: ' Sakon Kanpitak';
+    color: #FEA837;
+}
+
+.home-content p{
+    font-size: 1.5em;
+    color: #d9d9d9;
+    font-weight: var(--font-weight-bold);
+}
+
+.home-content p::after{
+    content: '';
+    border-right: 5px solid #000;
+    animation: typing 1s infinite;
+}
+
+@keyframes typing{
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+}
+
+.bg-home{
+    position: absolute;
+    top: 0;
+    right: 0;
+    background: var(--second-color-page);
+    width: 50%;
+    height: 100%;
+    border-bottom-left-radius: 150px;
+    z-index: -100;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* background-image: url(../assets/img/Blogging\ -\ Colour/test.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 90%; */
+}
+
+.bg-home #home-img{
+    width: 100%;
+}
+
+/* About Page */
+.about-content h1{
+    font-size: 2.5rem;
+    font-weight: var(--font-weight-bold);
+}
+
+.about-content p{
+    text-indent: 2rem;
+}
+
+.about-detail{
+    display: flex;
+    flex-direction: column;
+    margin-top: 1.5rem;
+}
+
+.about-detail li{
+    line-height: 2.5rem;
+}
+
+.about-detail li label{
+    width: 25%;
+    font-weight: var(--font-weight-bold);
+}
+
+.about-detail li span{
+    width: 75%;
+    float: right;
+}
+
+.about-btn{
+    margin-top: 2rem;
+}
+
+/* Skills Page */
+.skill-content{
+    background: var(--first-color-page);
+}
