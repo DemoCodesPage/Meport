@@ -23,6 +23,7 @@
 body{
     color: #000;
     font-family: var(--google-font);
+    overflow-x: hidden;
 }
 
 li{
@@ -110,7 +111,7 @@ section > .container{
     width: 50%;
 }
 
-.home-content span{
+.home-content h4{
     letter-spacing: 10px;
 }
 
@@ -127,7 +128,6 @@ section > .container{
 .home-content p{
     font-size: 1.5em;
     color: #d9d9d9;
-    font-weight: var(--font-weight-bold);
 }
 
 .home-content p::after{

@@ -5,13 +5,16 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./css/style.css">
+    <!-- AOS -->
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <!-- ICON -->
     <link rel="icon" href="./assets/Logo/Logo.png">
     <title>Meport</title>
 </head>
 
 <body>
     <header>
-        <nav class="navbar">
+        <nav class="navbar" data-aos="fade-down">
             <div class="container">
                 <div class="logo">
                     <a href="index.html">
@@ -30,16 +33,16 @@
     </header>
 
     <section class="home-area" id="home">
-        <div class="bg-home">
+        <div class="bg-home" data-aos="fade-left">
             <div id="home-img"></div>
         </div>
         <div class="container">
             <div class="row">
                 <div class="home-content">
-                    <span>Hey there!</span>
-                    <h1>I'm</h1>
-                    <p class="type">Front End</p>
-                    <div class="btn-link">
+                    <h4 data-aos="fade-right">Hey there!</h4>
+                    <h1 data-aos="fade-right">I'm</h1>
+                    <p class="type" data-aos="fade-right">Front End</p>
+                    <div class="btn-link" data-aos="fade-right">
                         <a class="btn-active" href="./assets/pdf/Resume.pdf" target="_blank">View Resume</a>
                     </div>
                 </div>
@@ -50,8 +53,8 @@
     <section class="about-content" id="about">
         <div class="container">
             <div class="row">
-                <div class="about-img" id="about-img"></div>
-                <div class="about-content">
+                <div class="about-img" id="about-img" data-aos="fade-right"></div>
+                <div class="about-content" data-aos="fade-left">
                     <h1>Let's introduce about myself</h1>
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi modi molestiae quisquam
                         placeat dolore veniam, culpa nemo nam omnis est?</p>
@@ -104,6 +107,17 @@
 
         </div>
     </footer>
+
+    <!-- AOS -->
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+        AOS.init({
+            offset: 200,
+            delay: 200,
+            duration: 1000,
+        });
+    </script>
+
     <!-- Lottie & Bodymovin -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/bodymovin/5.7.5/lottie.min.js"
         integrity="sha512-0bCDSnaX8FOD9Mq8WbHcDwshXwCB5V4EP+UBu87WQgga2b7lAsuEbaSmIZjH/XEmNhJuhrPbFHemre5HZwrk9w=="
