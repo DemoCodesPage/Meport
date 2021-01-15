@@ -1,9 +1,10 @@
+/* Navbar */
 .navbar {
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
-    height: 100px;
+    height: 12vmin;
     z-index: 100;
     & > .container {
         display: flex;
@@ -12,7 +13,7 @@
     }
 
     .logo {
-        font-size: 1.2vw;
+        font-size: 1.5vmin;
         h1::before {
             content: "Me";
             color: $font-color;
@@ -28,14 +29,9 @@
     }
 }
 
-@mixin transform($radius, $padding, $bg){
-    padding: $padding;
-    background: $bg;
-    border-radius: $radius;
-}
-
-.home-area{
-    .bg-home{
+/* Home Page */
+.home-area {
+    .bg-home {
         background: $second-color;
         position: absolute;
         top: 0;
@@ -45,30 +41,90 @@
         display: flex;
         align-items: center;
         border-bottom-left-radius: 150px;
-        #home-img{
+        #home-img {
             width: 100%;
             height: 100%;
         }
     }
-    .home-content{
+    .home-content {
         font-size: 2.5vw;
 
-        h5{
+        h5 {
             letter-spacing: 1vw;
         }
 
-        h1::after{
-            content: ' Sakon Kanpitak';
+        h1::after {
+            content: " Sakon Kanpitak";
             color: $font-color;
         }
 
-        .btn-link{
+        p{
+            color: #777777ab;
+            &::after {
+                content: "";
+                border-right: 5px solid #000;
+                animation: typing 1s infinite;
+            }
+    
+            @keyframes typing{
+                0%{
+                    opacity: 0;
+                }
+                100%{
+                    opacity: 1;
+                }
+            }
+        }
+
+        .btn-link {
             font-weight: $font-bold;
         }
     }
 }
 
-.btn-active{
-    @include transform(10rem, 0.8vw 1.5vw, $font-color);
-    color: #FFF;
+/* Button Active */
+@mixin transform($radius, $padding, $color, $bg) {
+    padding: $padding;
+    background: $bg;
+    border-radius: $radius;
+    color: $color;
+}
+
+.btn-active {
+    @include transform(10rem, 0.8vw 1.5vw, #fff, $font-color);
+}
+
+/* About Page */
+.about-area {
+    .about-img{
+        height: 100%;
+    }
+    .about-content {
+        font-size: 2.5vmin;
+        p {
+            text-indent: 30px;
+        }
+
+        .about-btn {
+            margin-top: 40px;
+        }
+    }
+}
+
+.about-list {
+    margin-top: 20px;
+    margin-left: 30px;
+    line-height: 5vmin;
+
+    li {
+        width: 100%;
+        display: flex;
+        label {
+            font-weight: $font-bold;
+            width: 25%;
+        }
+        span {
+            width: 75%;
+        }
+    }
 }

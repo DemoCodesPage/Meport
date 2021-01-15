@@ -20,7 +20,7 @@ body {
 }
 
 a {
-  font-size: 1.1vw;
+  font-size: 2.2vmin;
   text-decoration: none;
   color: #000;
 }
@@ -50,13 +50,13 @@ section {
   width: 50%;
 }
 
-/* Variables */
+/* Navbar */
 .navbar {
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
-  height: 100px;
+  height: 12vmin;
   z-index: 100;
 }
 .navbar > .container {
@@ -65,7 +65,7 @@ section {
   align-items: center;
 }
 .navbar .logo {
-  font-size: 1.2vw;
+  font-size: 1.5vmin;
 }
 .navbar .logo h1::before {
   content: "Me";
@@ -79,6 +79,7 @@ section {
   font-weight: 700;
 }
 
+/* Home Page */
 .home-area .bg-home {
   background: #ffd4a9;
   position: absolute;
@@ -104,15 +105,63 @@ section {
   content: " Sakon Kanpitak";
   color: #ff8928;
 }
+.home-area .home-content p {
+  color: #777777ab;
+}
+.home-area .home-content p::after {
+  content: "";
+  border-right: 5px solid #000;
+  animation: typing 1s infinite;
+}
+@keyframes typing {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
 .home-area .home-content .btn-link {
   font-weight: 700;
 }
 
+/* Button Active */
 .btn-active {
   padding: 0.8vw 1.5vw;
   background: #ff8928;
   border-radius: 10rem;
-  color: #FFF;
+  color: #fff;
+}
+
+/* About Page */
+.about-area .about-img {
+  height: 100%;
+}
+.about-area .about-content {
+  font-size: 2.5vmin;
+}
+.about-area .about-content p {
+  text-indent: 30px;
+}
+.about-area .about-content .about-btn {
+  margin-top: 40px;
+}
+
+.about-list {
+  margin-top: 20px;
+  margin-left: 30px;
+  line-height: 5vmin;
+}
+.about-list li {
+  width: 100%;
+  display: flex;
+}
+.about-list li label {
+  font-weight: 700;
+  width: 25%;
+}
+.about-list li span {
+  width: 75%;
 }
 
 /*# sourceMappingURL=index.css.map */
