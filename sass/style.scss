@@ -1,0 +1,74 @@
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100px;
+    z-index: 100;
+    & > .container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .logo {
+        font-size: 1.2vw;
+        h1::before {
+            content: "Me";
+            color: $font-color;
+        }
+    }
+
+    .nav-list {
+        display: flex;
+        li {
+            margin: 0 1.5vw;
+            font-weight: $font-bold;
+        }
+    }
+}
+
+@mixin transform($radius, $padding, $bg){
+    padding: $padding;
+    background: $bg;
+    border-radius: $radius;
+}
+
+.home-area{
+    .bg-home{
+        background: $second-color;
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 50vw;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        border-bottom-left-radius: 150px;
+        #home-img{
+            width: 100%;
+            height: 100%;
+        }
+    }
+    .home-content{
+        font-size: 2.5vw;
+
+        h5{
+            letter-spacing: 1vw;
+        }
+
+        h1::after{
+            content: ' Sakon Kanpitak';
+            color: $font-color;
+        }
+
+        .btn-link{
+            font-weight: $font-bold;
+        }
+    }
+}
+
+.btn-active{
+    @include transform(10rem, 0.8vw 1.5vw, $font-color);
+    color: #FFF;
+}

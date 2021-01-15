@@ -28,13 +28,13 @@ body{
 
 li{
     display: inline-block;
-    margin-left: 40px;
+    margin-left: 3vw;
     list-style: none;
 }
 
 a{
     text-decoration: none;
-    font-size: 17px;
+    font-size: clamp(1rem, 0.5vw, 17px);
     font-weight: var(--font-weight-bold);
     color: #000;
 }
@@ -47,7 +47,7 @@ a{
 }
 
 .row > div{
-    width: 50%;
+    width: 50vw;
 }
 
 .container{
@@ -106,17 +106,17 @@ section > .container{
 }
 
 .home-content{
-    font-size: 30px;
     line-height: 70px;
-    width: 50%;
+    width: 100%;
 }
 
 .home-content h4{
+    font-size: clamp(1rem, 2vw, 2rem);
     letter-spacing: 10px;
 }
 
 .home-content h1{
-    font-size: 2em;
+    font-size: clamp(2rem, 4vw, 4rem);
     font-weight: var(--font-weight-bold);
 }
 
@@ -126,7 +126,7 @@ section > .container{
 }
 
 .home-content p{
-    font-size: 1.5em;
+    font-size: clamp(1.5rem, 3vw, 3.2rem);
     color: #d9d9d9;
 }
 
@@ -157,10 +157,6 @@ section > .container{
     display: flex;
     justify-content: center;
     align-items: center;
-    /* background-image: url(../assets/img/Blogging\ -\ Colour/test.svg);
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: 90%; */
 }
 
 .bg-home #home-img{
