@@ -48,6 +48,10 @@ section {
 }
 .row > div {
   width: 50%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 /* Navbar */
@@ -74,7 +78,11 @@ section {
 .navbar .nav-list {
   display: flex;
 }
-.navbar .nav-list li {
+.navbar .nav-list .nav-icon {
+  display: none;
+  cursor: pointer;
+}
+.navbar .nav-list .nav-item {
   margin: 0 1.5vw;
   font-weight: 700;
 }
@@ -90,6 +98,7 @@ section {
   display: flex;
   align-items: center;
   border-bottom-left-radius: 150px;
+  z-index: -100;
 }
 .home-area .bg-home #home-img {
   width: 100%;
@@ -110,7 +119,7 @@ section {
 }
 .home-area .home-content p::after {
   content: "";
-  border-right: 5px solid #000;
+  border-right: 0.4vw solid #000;
   animation: typing 1s infinite;
 }
 @keyframes typing {
@@ -124,6 +133,10 @@ section {
 .home-area .home-content .btn-link {
   font-weight: 700;
 }
+.home-area .home-content .arrow-down {
+  cursor: pointer;
+  display: none;
+}
 
 /* Button Active */
 .btn-active {
@@ -131,6 +144,12 @@ section {
   background: #ff8928;
   border-radius: 10rem;
   color: #fff;
+  border: 2px solid transparent;
+}
+.btn-active:hover {
+  border: 2px solid tomato;
+  color: tomato;
+  background: transparent;
 }
 
 /* About Page */
@@ -145,6 +164,7 @@ section {
 }
 .about-area .about-content .about-btn {
   margin-top: 40px;
+  font-weight: 700;
 }
 
 .about-list {
@@ -162,6 +182,34 @@ section {
 }
 .about-list li span {
   width: 75%;
+}
+
+@media only screen and (max-width: 700px) {
+  .navbar .nav-list .nav-icon {
+    display: block;
+  }
+  .navbar .nav-list .nav-item {
+    display: none;
+  }
+
+  .home-area .bg-home {
+    border-bottom-left-radius: 0px;
+    width: 50%;
+  }
+  .home-area .bg-home #home-img {
+    display: none;
+  }
+  .home-area .row {
+    display: flex;
+    justify-content: center;
+  }
+  .home-area .row .home-content {
+    text-align: center;
+    line-height: 8vw;
+  }
+  .home-area .row .home-content .arrow-down {
+    display: block;
+  }
 }
 
 /*# sourceMappingURL=index.css.map */

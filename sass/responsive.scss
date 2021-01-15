@@ -1,0 +1,35 @@
+@media only screen and (max-width: 700px) {
+    .navbar {
+        .nav-list {
+            .nav-icon {
+                display: block;
+            }
+            .nav-item {
+                display: none;
+            }
+        }
+    }
+
+    .home-area {
+        .bg-home {
+            border-bottom-left-radius: 0px;
+            width: 50%;
+
+            #home-img {
+                display: none;
+            }
+        }
+
+        .row {
+            display: flex;
+            justify-content: center;
+            .home-content {
+                text-align: center;
+                line-height: 8vw;
+                .arrow-down{
+                    display: block;
+                }
+            }
+        }
+    }
+}
