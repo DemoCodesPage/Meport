@@ -17,3 +17,22 @@ function NavbarSticky() {
     navbar.classList.toggle('sticky', window.scrollY > 0);
 }
 window.addEventListener('scroll', NavbarSticky)
+
+
+let btn_open = document.querySelector('.open-menu');
+let btn_close = document.querySelector('.close-menu');
+let show = document.querySelector('.nav-list');
+
+btn_open.addEventListener('click', function(){
+    btn_open.style.display = 'none';
+    btn_close.style.display = 'block';
+    show.style.display = 'block';
+})
+
+btn_close.addEventListener('click', function(){
+    btn_open.style.display = 'block';
+    btn_close.style.display = 'none';
+    show.style.display = 'none';
+})
+
+
